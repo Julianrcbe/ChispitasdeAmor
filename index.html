@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos de Tu Emprendimiento. Ramos, cajas y regalos personalizados.">
+  <title>Tu Emprendimiento | Ramos y Cajas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <img src="assets/logo.svg" alt="Logo de Tu Emprendimiento">
+      <span>Tu Emprendimiento</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Productos</a>
+      <a href="#ramos">Ramos</a>
+      <a href="#cajas">Cajas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">DETALLES QUE SE CONVIERTEN EN RECUERDOS</p>
+        <h1>Regalos hechos para<br><em>momentos especiales.</em></h1>
+        <p class="hero-text">
+          Descubre nuestros ramos, cajas y detalles preparados con cariño para sorprender a esa persona especial.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalogo">Ver productos</a>
+          <a class="btn btn-secondary" href="#contacto">Contactarme</a>
+        </div>
+      </div>
+
+      <div class="hero-logo-card">
+        <div class="logo-frame">
+          <img src="assets/logo.svg" alt="Logo de Tu Emprendimiento">
+        </div>
+        <p>Tu logo aquí</p>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div>
+        <p class="eyebrow">NUESTRO CATÁLOGO</p>
+        <h2>Elige un detalle que hable por ti.</h2>
+      </div>
+      <p>Explora nuestras opciones y escríbenos por WhatsApp para consultar disponibilidad, personalizaciones y pedidos.</p>
+    </section>
+
+    <section class="section catalog" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PRODUCTOS</p>
+          <h2>Favoritos de la tienda</h2>
+        </div>
+        <div class="filters" role="tablist" aria-label="Categorías">
+          <button class="filter active" data-filter="todos">Todos</button>
+          <button class="filter" data-filter="ramos">Ramos</button>
+          <button class="filter" data-filter="cajas">Cajas</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="category-banner section" id="ramos">
+      <div>
+        <p class="eyebrow">CATEGORÍA</p>
+        <h2>Ramos</h2>
+        <p>Combinaciones pensadas para regalar color, cariño y una experiencia inolvidable.</p>
+        <a class="text-link" href="#catalogo" data-jump-filter="ramos">Ver ramos →</a>
+      </div>
+      <div class="category-shape">R</div>
+    </section>
+
+    <section class="category-banner reverse section" id="cajas">
+      <div>
+        <p class="eyebrow">CATEGORÍA</p>
+        <h2>Cajas</h2>
+        <p>Detalles completos y personalizables para cumpleaños, aniversarios y cualquier ocasión.</p>
+        <a class="text-link" href="#catalogo" data-jump-filter="cajas">Ver cajas →</a>
+      </div>
+      <div class="category-shape">C</div>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="about-logo">
+        <img src="assets/logo.svg" alt="Logo de Tu Emprendimiento">
+      </div>
+      <div>
+        <p class="eyebrow">SOBRE NOSOTROS</p>
+        <h2>Hecho con intención y mucho cariño.</h2>
+        <p>
+          En Tu Emprendimiento creamos detalles para que cada regalo se sienta personal.
+          Puedes adaptar colores, mensajes y algunos elementos de nuestros productos según la ocasión.
+        </p>
+        <p>
+          ¿Tienes una idea diferente? Escríbenos y la hacemos realidad.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div>
+        <p class="eyebrow">CONTACTO</p>
+        <h2>¿Listo para sorprender?</h2>
+        <p>Haz tu consulta directamente por WhatsApp. Te responderemos con disponibilidad, opciones de personalización y formas de entrega.</p>
+      </div>
+      <a class="btn whatsapp-btn" href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20un%20producto." target="_blank" rel="noopener">
+        <span>◉</span> Escribir por WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Tu Emprendimiento</strong>
+      <span>Ramos · Cajas · Detalles</span>
+    </div>
+    <div class="footer-links">
+      <a href="#catalogo">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <p>© <span id="year"></span> Tu Emprendimiento</p>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    WA
+  </a>
+
+  <div class="modal" id="product-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Cerrar" data-close-modal>×</button>
+      <div class="modal-media" id="modal-media"></div>
+      <div class="modal-info">
+        <span class="pill" id="modal-category"></span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div class="modal-bottom">
+          <strong id="modal-price"></strong>
+          <a class="btn whatsapp-btn" id="modal-whatsapp" target="_blank" rel="noopener">Consultar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
