@@ -29,10 +29,12 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
       <div class="lang-selector">
-        <button type="button" class="lang-pill active" onclick="cambiarIdioma('es')">ES</button>
+        <button type="button" class="lang-pill" onclick="cambiarIdioma('es')">ES</button>
         <button type="button" class="lang-pill" onclick="cambiarIdioma('pl')">PL</button>
       </div>
-      <div id="google_translate_element" style="display:none;"></div>
+
+      <!-- Déjalo así, lo ocultaremos con CSS invisible -->
+      <div id="google_translate_element"></div>
     </nav>
   </header>
 
@@ -146,15 +148,16 @@
 
   <script src="script.js"></script>
   <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'es,pl',
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,pl',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
