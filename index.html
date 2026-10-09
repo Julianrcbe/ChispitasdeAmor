@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
   <title>Tu Emprendimiento | Ramos y Cajas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Inicio">
@@ -22,12 +26,16 @@
     <nav class="main-nav" id="main-nav">
       <a href="#inicio">Inicio</a>
       <a href="#catalogo">Productos</a>
-      <a href="#ramos">Ramos</a>
-      <a href="#cajas">Cajas</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
+
+  <div id="google_translate_element">f</div>
+  <div id="google_translate_element"></div>
+  <p>
+    hola
+  </p>
 
   <main id="inicio">
     <section class="hero">
@@ -51,19 +59,14 @@
       </div>
     </section>
 
-    <section class="intro section">
-      <div>
-        <p class="eyebrow">NUESTRO CATÁLOGO</p>
-        <h2>Elige un detalle que hable por ti.</h2>
-      </div>
-      <p>Explora nuestras opciones y escríbenos por WhatsApp para consultar disponibilidad, personalizaciones y pedidos.</p>
-    </section>
-
     <section class="section catalog" id="catalogo">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">PRODUCTOS</p>
-          <h2>Favoritos de la tienda</h2>
+          <p class="eyebrow">NUESTRO CATÁLOGO</p>
+          <h2>Elige un detalle que hable por ti.</h2>
+          <p>Explora nuestras opciones y escríbenos por WhatsApp para consultar disponibilidad, personalizaciones y
+            pedidos.
+          </p>
         </div>
         <div class="filters" role="tablist" aria-label="Categorías">
           <button class="filter active" data-filter="todos">Todos</button>
@@ -75,26 +78,6 @@
       <div class="product-grid" id="product-grid"></div>
     </section>
 
-    <section class="category-banner section" id="ramos">
-      <div>
-        <p class="eyebrow">CATEGORÍA</p>
-        <h2>Ramos</h2>
-        <p>Combinaciones pensadas para regalar color, cariño y una experiencia inolvidable.</p>
-        <a class="text-link" href="#catalogo" data-jump-filter="ramos">Ver ramos →</a>
-      </div>
-      <div class="category-shape">R</div>
-    </section>
-
-    <section class="category-banner reverse section" id="cajas">
-      <div>
-        <p class="eyebrow">CATEGORÍA</p>
-        <h2>Cajas</h2>
-        <p>Detalles completos y personalizables para cumpleaños, aniversarios y cualquier ocasión.</p>
-        <a class="text-link" href="#catalogo" data-jump-filter="cajas">Ver cajas →</a>
-      </div>
-      <div class="category-shape">C</div>
-    </section>
-
     <section class="about section" id="nosotros">
       <div class="about-logo">
         <img src="assets/logo.svg" alt="Logo de Tu Emprendimiento">
@@ -103,7 +86,7 @@
         <p class="eyebrow">SOBRE NOSOTROS</p>
         <h2>Hecho con intención y mucho cariño.</h2>
         <p>
-          En Tu Emprendimiento creamos detalles para que cada regalo se sienta personal.
+          En <b>Chispitas de amor</b> creamos detalles para que cada regalo se sienta personal.
           Puedes adaptar colores, mensajes y algunos elementos de nuestros productos según la ocasión.
         </p>
         <p>
@@ -116,9 +99,12 @@
       <div>
         <p class="eyebrow">CONTACTO</p>
         <h2>¿Listo para sorprender?</h2>
-        <p>Haz tu consulta directamente por WhatsApp. Te responderemos con disponibilidad, opciones de personalización y formas de entrega.</p>
+        <p>Haz tu consulta directamente por WhatsApp. Te responderemos con disponibilidad, opciones de personalización y
+          formas de entrega.</p>
       </div>
-      <a class="btn whatsapp-btn" href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20un%20producto." target="_blank" rel="noopener">
+      <a class="btn whatsapp-btn"
+        href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20consultar%20por%20un%20producto." target="_blank"
+        rel="noopener">
         <span>◉</span> Escribir por WhatsApp
       </a>
     </section>
@@ -137,7 +123,8 @@
     <p>© <span id="year"></span> Tu Emprendimiento</p>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a class="floating-whatsapp" href="https://wa.me/XXXXXXXXXXX?text=Hola%2C%20quiero%20hacer%20una%20consulta."
+    target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     WA
   </a>
 
@@ -159,5 +146,16 @@
   </div>
 
   <script src="script.js"></script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'es,pl',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
 </body>
+
 </html>
