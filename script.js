@@ -194,14 +194,31 @@ document.getElementById("year").textContent = new Date().getFullYear();
 renderProducts();
 
 function cambiarIdioma(lang) {
+  // 1. Establecer la cookie oficial que lee el traductor de Google
+  const cookieValue = `/es/${lang}`;
+  const domain = window.location.hostname;
+  
+  document.cookie = `googtrans=${cookieValue}; path=/;`;
+  if (domain && domain !== "localhost" && domain !== "127.0.0.1") {
+    document.cookie = `googtrans=${cookieValue}; path=/; domain=.${domain};`;
+  }
+
+  // 2. Intentar disparar el cambio en el selector si ya está cargado
   const select = document.querySelector(".goog-te-combo");
   if (select) {
     select.value = lang;
     select.dispatchEvent(new Event("change"));
   }
 
-  // Cambiar el botón activo
-  document.querySelectorAll(".lang-pill").forEach(btn => {
-    btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === lang);
-  });
+  // 3. Recargar la página para que Google aplique la traducción completa
+  window.location.reload();
 }
+
+// Al cargar la página, marcar activo el botón correcto según la cookie guardada
+document.addEventListener("DOMContentLoaded", () => {
+  const match = document.cookie.match(/googtrans=\/[a-z]{2}\/([a-z]{2})/);
+  const current = match ? match[1] : "es";
+  document.querySelectorAll(".lang-pill").forEach(btn => {
+    btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === current);
+  });
+});
