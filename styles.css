@@ -332,3 +332,25 @@ body {
   color: var(--ink);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
+/* Ocultar el widget de Google sin quitarlo del flujo interno */
+#google_translate_element {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Ocultar barra superior y marcos que inyecta Google */
+.goog-te-banner-frame,
+.skiptranslate,
+#goog-gt-tt {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+  position: static !important;
+}
