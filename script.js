@@ -192,3 +192,16 @@ nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 renderProducts();
+
+function cambiarIdioma(lang) {
+  const select = document.querySelector(".goog-te-combo");
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+  }
+
+  // Cambiar el botón activo
+  document.querySelectorAll(".lang-pill").forEach(btn => {
+    btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === lang);
+  });
+}
